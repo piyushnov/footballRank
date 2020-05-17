@@ -12,7 +12,8 @@ pipeline {
         stage('Test') {
             steps {
                 sh "cd $JENKINS_HOME/workspace/football_master/target/"
-                sh "java -jar Football-1.0-SNAPSHOT.jar"
+                sh "ls "
+                sh "java -jar *.jar"
             }
         }
         stage('Deploy') {

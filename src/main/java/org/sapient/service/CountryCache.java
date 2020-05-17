@@ -38,7 +38,7 @@ public class CountryCache {
 
     public String getCountryId(String countryName) {
         try {
-            return countryLoadingCache.get(countryName);
+            return countryLoadingCache==null?null:countryLoadingCache.get(countryName);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
