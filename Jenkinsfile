@@ -6,12 +6,13 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh "mvn clean install -DskipTests"
-                echo " done..."
             }
         }
         stage('Test') {
             steps {
-                echo "testing ..."
+                echo "testing started..."
+                sh "mvn test"
+                echo "testing done...."
             }
         }
         stage('Deploy') {
